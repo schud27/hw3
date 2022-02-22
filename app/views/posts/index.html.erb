@@ -1,0 +1,16 @@
+<h1>Log of Posts</h1>
+
+<ul>
+    <% for post in @posts %>
+        <li>
+            <a href="/posts/<%= post.id %>">
+                <%= post.title %>
+            </a>
+        </li>
+    <% end %>
+</ul>
+
+
+<p>
+    <a href="/posts/new">Add a New Post</a>
+</p>
