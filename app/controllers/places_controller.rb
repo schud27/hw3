@@ -11,6 +11,10 @@ class PlacesController < ApplicationController
         @place = Place.new
     end
 
+    def posts
+        @posts = Post.find(params["id"])
+    end
+
     def create
         @place = Place.new(params["place"])
         @place.save
